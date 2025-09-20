@@ -1,30 +1,25 @@
 // Alternative Interview Question for Lab 2
+import java.util.Scanner; // Scanner is in the java.util package
+
 public class AltLab2 {
   public static void main(String[] args) {
-    // Define Variables
-    String name;
-    int number;
-    double pi;
+    // Create Scanner object
+    Scanner input = new Scanner(System.in);
     
     //Section A name (println)
     System.out.println("Name?");
-    
-    System.out.print("My name is " + firstName + myMiddle + ". " + lastName ".\n");
-    System.out.print("I am " + myAge + " years old.\n");
-    System.out.print("Pi is " + PI + "\n");
-    
-    //Section B number (print)
-    System.out.println("Name   : " + myName);
-    System.out.println("Initial: " + myMiddle);
-    System.out.println("Age    : " + myAge);
-    System.out.println("Pi     : " + PI);
-    
-    //Section C pi (printf)
-    System.out.println("My name is %s %c. %s amd %d years old.\n", firstName, myMiddle, lastName, myAge);
-    System.out.printf("Pi     : %.6f\n", PI);
-    System.out.printf("Pi     : %.5f\n", PI);
-    System.out.printf("Pi     : %.4f\n", PI);
-    System.out.printf("Pi     : %.3f\n", PI);
-    System.out.printf("Pi     : %.2f\n", PI);
+    String name = input.nextLine();
+    System.out.println(name);
+
+    // Section B number (print)
+    System.out.print("Integer? ");
+    int number = input.nextInt();
+    System.out.println(number);
+
+    // Section C pi (printf);
+    final double PI = 3.141529;
+    System.out.print("Pi? ");
+    int decimals = input.nextInt();
+    System.out.print("Pi: %." + decimals + "f\n", PI);
   }
 }
